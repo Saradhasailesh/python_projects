@@ -16,14 +16,18 @@ while(chances<5):
             print("Congratulations you won!!!")
             break
         elif guess>num:
-            print("Your guess is greater than the actual number. Kindly select a smaller number.") 
+            print("Your guess is greater than the actual number. Kindly select a smaller number than", guess)
         else:
-            print("Your guess is smaller than the actual number. Kindly select a greater number.")  
+            print("Your guess is smaller than the actual number. Kindly select a greater number than", guess)
 
         chances+=1 
-        
+
     except ValueError:
         print("Invalid input. Please enter a valid integer")
+
+if not chances<5:
+
+    print("Sorry,You Lose!!! The number is",num)
 
 
 
